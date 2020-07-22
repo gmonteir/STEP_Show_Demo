@@ -21,6 +21,7 @@ public class PhysicalButton : Interactive
         StopAllCoroutines();
         StartCoroutine(pressButtonAnimation());
 
+        On.Invoke();
         base.Interact();
     }
 
