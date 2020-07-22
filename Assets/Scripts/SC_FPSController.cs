@@ -32,6 +32,24 @@ public class SC_FPSController : MonoBehaviour
 
     void Update()
     {
+        Movement();
+        Interaction();
+    }
+
+    void Interaction()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            RaycastHit hit;
+            if(Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, 10))
+            {
+                hit.transform.GetComponent<Interactive>()?.Interact();
+            }
+        }
+    }
+
+    void Movement()
+    {
         // We are grounded, so recalculate move direction based on axes
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
@@ -71,4 +89,5 @@ public class SC_FPSController : MonoBehaviour
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
     }
+
 }
