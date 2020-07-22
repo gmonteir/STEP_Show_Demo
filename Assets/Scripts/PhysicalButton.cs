@@ -8,6 +8,7 @@ public class PhysicalButton : Interactive
     float pressStartPosition;
     public float animationSpeed = 1;
     public float pressEndPosition;
+    public float timeToTurnOff;
 
     private void Awake()
     {
@@ -15,17 +16,23 @@ public class PhysicalButton : Interactive
         pressStartPosition = press.localPosition.z;
     }
 
-    public override void Interact()
+    private void Start()
     {
-        print("Pressed Button");
-        StopAllCoroutines();
-        StartCoroutine(pressButtonAnimation());
-
-        On.Invoke();
-        base.Interact();
+        Off.Invoke();
     }
 
-    IEnumerator pressButtonAnimation()
+    public override void Interact()
+    {
+        StopAllCoroutines();
+        StartCoroutine(PressButtonAnimation());
+        if(timeToTurnOff > 0)
+            StartCoroutine(TurnOffTimer());
+
+        base.Interact();
+        On.Invoke();
+    }
+
+    IEnumerator PressButtonAnimation()
     {
         while (press.localPosition.z > pressEndPosition)
         {
@@ -37,5 +44,11 @@ public class PhysicalButton : Interactive
             press.localPosition += new Vector3(0, 0, Time.deltaTime * animationSpeed);
             yield return null;
         }
+    }
+
+    IEnumerator TurnOffTimer()
+    {
+        yield return new WaitForSeconds(timeToTurnOff);
+        Off.Invoke();
     }
 }
