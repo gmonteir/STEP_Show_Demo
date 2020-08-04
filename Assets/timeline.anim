@@ -47,7 +47,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 22.833334
+    m_StopTime: 107.45
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -125,77 +125,112 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 2.05
-    functionName: NextSubtitles
+    functionName: SetSubtitles
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 6.5
-    functionName: NextSubtitles
+  - time: 13.066667
+    functionName: SetSubtitles
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 1
+    messageOptions: 0
+  - time: 29
+    functionName: SetSubtitles
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 2
+    messageOptions: 0
+  - time: 31.983334
+    functionName: SetSubtitles
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 3
+    messageOptions: 0
+  - time: 44.833332
+    functionName: ClearSubtitles
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 8
-    functionName: NextSubtitles
+  - time: 45.75
+    functionName: CallEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 9.583333
-    functionName: NextSubtitles
+  - time: 47.2
+    functionName: PauseTimeline
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 11.35
-    functionName: NextSubtitles
+  - time: 47.7
+    functionName: CallEvent
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 12.683333
-    functionName: NextSubtitles
+  - time: 47.966667
+    functionName: SetSubtitles
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 4
     messageOptions: 0
-  - time: 14.066667
-    functionName: NextSubtitles
+  - time: 60.1
+    functionName: SetSubtitles
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 5
     messageOptions: 0
-  - time: 16.233334
-    functionName: NextSubtitles
+  - time: 62.183334
+    functionName: SetSubtitles
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 6
     messageOptions: 0
-  - time: 18.766666
-    functionName: NextSubtitles
+  - time: 69.53333
+    functionName: SetSubtitles
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 7
     messageOptions: 0
-  - time: 21.083334
-    functionName: NextSubtitles
+  - time: 82.4
+    functionName: SetSubtitles
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
-    intParameter: 0
+    intParameter: 8
     messageOptions: 0
-  - time: 22.833334
-    functionName: NextSubtitles
+  - time: 90.96667
+    functionName: SetSubtitles
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 9
+    messageOptions: 0
+  - time: 96.15
+    functionName: SetSubtitles
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 10
+    messageOptions: 0
+  - time: 107.45
+    functionName: ClearSubtitles
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
