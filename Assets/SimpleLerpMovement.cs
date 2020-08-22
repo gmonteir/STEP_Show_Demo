@@ -27,8 +27,8 @@ public class SimpleLerpMovement : MonoBehaviour
             t -= (1 / animationTime) * Time.deltaTime;
         t = Mathf.Clamp01(t);
 
-        transform.localPosition = Vector3.Lerp(startPosition, startPosition + endPosition, t);
-        transform.localEulerAngles = Vector3.Lerp(startRotation, startRotation + endRotation, t);
+        transform.localPosition = Vector3.Lerp(startPosition, endPosition, t);
+        transform.localEulerAngles = Vector3.Lerp(startRotation, endRotation, t);
     }
 
     public void ToggleMove()
